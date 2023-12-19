@@ -43,9 +43,9 @@ export async function POST(req: NextRequest) {
     fileType: EncodedFileType.MP4,
     filepath: "livekit-demo/room-composite-test.mp4",
     s3: {
-      accessKey: "AKIA6CUTBRDMTFL6FBFP",
-      secret: "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",
-      bucket: "wisdom56",
+      accessKey: process.env.NEXT_PUBLIC_S3_ACCESS_KEY,
+      secret: process.env.NEXT_PUBLIC_S3_SECRET,
+      bucket: process.env.NEXT_PUBLIC_S3_BUCKET_NAME,
       region: "us-east-1",
     },
   }
